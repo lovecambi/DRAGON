@@ -1,3 +1,5 @@
+DiRected Acyclic Graphical Objective-oriented Neural-networks (feedforward)
+
 Running OpenMP version of this code using Xcode: from http://clang-omp.github.io/
 
 Instructions are provided by Sebastian Stenzel.
