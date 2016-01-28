@@ -1,0 +1,27 @@
+Running OpenMP version of this code using Xcode: from http://clang-omp.github.io/
+
+Instructions are provided by Sebastian Stenzel.
+1. 	Install clang-omp using homebrew: brew install clang-omp.
+2.	Create a new Xcode project.
+3. 	Under Build Settings
+	1.	Add a new user-defined setting CC with the value /usr/local/bin/clang-omp
+	2.	Add -fopenmp to Other C Flags
+	3.	Add /usr/local/include to Header Search Paths
+	4.	Set Enable Modules (C and Objective-C) to No.
+4.	Under Build Phases
+	Add /usr/local/lib/libiomp5.dylib to Link Binary With Libraries
+
+Done. You can now #include <libiomp/omp.h> and start using #pragma omp ... in your source code.
+
+Run the Makefile of OpenMP version of this code in terminal:
+
+1. 	Install clang-omp using homebrew: brew install clang-omp.
+2.	If you confront the case:
+	fatal error: wchar.h: No such file or directory
+
+	Then do the following:
+	1.	Open terminal
+	2.	Type -->  xcode-select --install
+	3.	A pop-up windows will apear asking you about install tools
+	4.	Choose install tools
+	5.	Wait install to finish 
